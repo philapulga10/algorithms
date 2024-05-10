@@ -1,0 +1,5 @@
+- với chuỗi string = "loveleetcode"
+- khởi tạo một object
+- sử dụng object đó để lấy ký tự trong chuỗi làm key và giá trị là số lượng ký tự trong chuỗi đó
+- sử dụng lại chuỗi đó làm key, dựa vào object rồi lấy key đó ra để lấy giá trị ra
+- nếu giá trị đó bằng 1 thì trả về index đó

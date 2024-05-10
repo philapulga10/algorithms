@@ -1,0 +1,19 @@
+- Find the largest three distinct elements in an array
+
+- 1. Two sum
+- 14. Longest Common Prefix
+- 28. Find the Index of the First Occurrence in a String
+- 35. Search Insert Position
+- 58. Length of Last Word
+- 66. Plus One
+- 136. Single Number
+- 217. Contains Duplicate
+- 242. Valid Anagram
+- 283. Move Zeroes
+- 344. Reverse String
+- 349. Intersection of Two Array
+- 350. Intersection of Two Array II
+- 387. First Unique Character in a String
+- 389. Find the Difference
+- 448. Find All Numbers Disappeared in an Array
+- 796. Rotate String

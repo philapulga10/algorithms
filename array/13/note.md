@@ -1,0 +1,13 @@
+- numbers = [1, 2, 3, 4]
+- kiểm tra một mảng có phần tử trùng nhau hay không
+- solution 1:
+  - dùng object để lưu trữ phần tử đó có ở trong mảng hay không
+  - duyệt qua mảng numbers
+    - kiểm tra xem object với key là phần tử đã có chưa?
+      - nếu có rồi thì return true
+      - ngược lại dùng object lưu lại key với phần tử vừa lặp qua và có giá trị là true
+- solution 2:
+  - sắp xếp mảng sau đó duyệt qua từng cặp phần tử liên kết để kiểm tra xem có cặp nào bằng nhau không
+- solution 3:
+  - dùng dùng set để kiểm tra tính duy nhất của mảng
+    - nếu kích thước của set nhỏ hơn kích thước của mảng ban đầu, có nghĩa là có các phần tử trùng lặp

@@ -1,0 +1,38 @@
+- stringArray = ["flower", "flow", "flight"]
+
+- longestPrefix = ""
+- referenceString = flower
+
+- referenceString.length = 6
+
+- i = 0
+  - currentChar = f
+    - stringArray.length = 3
+    - j = 1 -> i = 0 < stringArray[1].length = "flow".length = 4, stringArray[1][0] = f === currentChar = f
+    - j = 2 -> i = 0 < stringArray[2].length = "flight".length = 6, stringArray[2][0] = f === currentChar = f
+    -> longestPrefix = f
+- i = 1
+  - currentChar = l
+    - stringArray.length = 3
+    - j = 1
+    - j = 2
+- i = 2
+  - currentChar = o
+    - stringArray.length = 3
+    - j = 1
+    - j = 2
+- i = 3
+  - currentChar = w
+    - stringArray.length = 3
+    - j = 1
+    - j = 2
+- i = 4
+  - currentChar = e
+    - stringArray.length = 3
+    - j = 1
+    - j = 2
+- i = 5
+  - currentChar = r
+    - stringArray.length = 3
+    - j = 1
+    - j = 2
