@@ -21,7 +21,7 @@ function isSubsequence(s, t) {
     if (s[sIndex] === t[tIndex]) {
       sIndex++;
     }
-    
+
     tIndex++;
   }
 
