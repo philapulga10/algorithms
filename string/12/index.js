@@ -25,7 +25,11 @@ function isSubsequence(s, t) {
     tIndex++;
   }
 
-  return sIndex === s.length;
+  if (sIndex === s.length) {
+    return true;
+  }
+
+  return false;
 }
 
 let s = "abc";

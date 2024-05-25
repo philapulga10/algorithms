@@ -15,23 +15,42 @@
 // Input: s = "abcde", goal = "abced"
 // Output: false
 
-function rotateString(string, goal) {
-  let array = string + string;
-
-  if (string.length !== goal.length) {
-    return false;
+function rotateString(s, goal) {
+  if (s.length !== goal.length) {
+    return false; // Nếu độ dài của chuỗi s và goal khác nhau, trả về false ngay lập tức
   }
 
-  if (array.includes(goal)) {
-    return true;
-  } else {
-    return false;
+  const n = s.length;
+
+  // Duyệt qua từng vị trí để thực hiện dịch chuyển và so sánh với goal
+  for (let shift = 0; shift < n; shift++) {
+    let rotated = true;
+
+    // Dịch chuyển chuỗi s sang trái shift lần
+    for (let i = 0; i < n; i++) {
+      if (s[(i + shift) % n] !== goal[i]) {
+        rotated = false;
+        break;
+      }
+    }
+
+    // Nếu sau dịch chuyển chuỗi s trùng với goal, trả về true
+    if (rotated) {
+      return true;
+    }
   }
+
+  // Nếu không tìm thấy bất kỳ số lần dịch chuyển nào mà s trùng với goal, trả về false
+  return false;
 }
 
-let string = "abcde";
-let goal = "cdeab";
+// Test các ví dụ
+let string1 = "abcde";
+let goal1 = "cdeab";
+let result1 = rotateString(string1, goal1);
+console.log(result1); // Output: true
 
-let result = rotateString(string, goal);
-
-console.log(result);
+let string2 = "abcde";
+let goal2 = "abced";
+let result2 = rotateString(string2, goal2);
+console.log(result2); // Output: false

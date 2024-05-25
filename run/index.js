@@ -1,23 +1,26 @@
-let haystack = "absbutsad";
-let needle = "sad";
+let isAnagram = function (s, t) {
+  if (s.length !== t.length) {
+    return false;
+  }
 
-let haystackLength = haystack.length;
-let needleLength = needle.length;
+  objS = {};
+  objT = {};
 
-for (let i = 0; i <= haystackLength - needleLength; i++) {
-  let match = true;
+  for (let i = 0; i < s.length; i++) {
+    objS[s[i]] = (objS[s[i]] || 0) + 1;
+    objT[t[i]] = (objT[t[i]] || 0) + 1;
+  }
 
-  for (let j = 0; j < needleLength; j++) {
-    if (haystack[i + j] !== needle[j]) {
-      match = false;
-
-      break;
+  for (let key in objS) {
+    if (objS[key] !== objT[key]) {
+      return false;
     }
   }
 
-  if (match) {
-    console.log(i);
-  }
-}
+  return true;
+};
 
-console.log(-1);
+let s = "anagram";
+let t = "nagaran";
+
+console.log(isAnagram(s, t));

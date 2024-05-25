@@ -15,26 +15,40 @@
 // Explanation: There is no common prefix among the input strings.
 
 function longestCommonPrefix(stringArray) {
-  let longestPrefix = "";
-  let referenceString = stringArray[0];
+  // Chọn chuỗi đầu tiên làm chuỗi tham chiếu
+  let prefix = stringArray[0];
 
-  for (let i = 0; i < referenceString.length; i++) {
-    let currentChar = referenceString[i];
+  // Duyệt qua từng ký tự của chuỗi tham chiếu
+  for (let i = 0; i < prefix.length; i++) {
+    let currentChar = prefix[i];
 
+    // Duyệt qua các chuỗi còn lại trong mảng
     for (let j = 1; j < stringArray.length; j++) {
-      if (i >= stringArray[j].length || stringArray[j][i] !== currentChar) {
-        return longestPrefix;
+      let currentString = stringArray[j];
+
+      // Nếu độ dài của chuỗi đang xét không đủ dài hoặc ký tự tại vị trí i không giống
+      if (i >= currentString.length || currentString[i] !== currentChar) {
+        // Trả về phần đầu chuỗi là chuỗi tiền tố chung dài nhất
+        let result = "";
+
+        for (let k = 0; k < i; k++) {
+          result += prefix[k];
+        }
+
+        return result;
       }
     }
-
-    longestPrefix += currentChar;
   }
 
-  return longestPrefix;
+  // Trả về chuỗi tham chiếu nếu là chuỗi tiền tố chung đầy đủ
+  return prefix;
 }
 
+// Mảng các chuỗi đầu vào
 let stringArray = ["flower", "flow", "flight"];
 
+// Gọi hàm tìm chuỗi tiền tố chung dài nhất
 let result = longestCommonPrefix(stringArray);
 
-console.log(result);
+// In kết quả ra màn hình
+console.log(result); // Output: "fl"
