@@ -1,0 +1,13 @@
+- nums = [4, 5, 6, 7, 0, 1, 2]
+- left = 0, right = nums.length - 1 = 6
+- left = 0 < right = 6
+  - mid = Math.floor((left + right) / 2) = 3
+  - nums[mid] = nums[3] = 7 !== target = 0
+  - nums[left] = nums[0] = 4 < nums[mid] = nums[3] = 7
+    - nums[left] = nums[0] = 4 > 0 => left = mid + 1 = 4
+- left = 4 < right < 6
+  - mid = 5
+  - nums[5] = 0 === target = 0 => right = mid - 1 = 4
+- left = right
+  - mid = 4
+  - nums[4] === 0 => return 4
