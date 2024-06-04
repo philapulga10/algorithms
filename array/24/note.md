@@ -1,0 +1,11 @@
+- nums = [4, 3, 2, 1]
+- l = 4
+- value1 = 4 X 3 X 2 = 24
+- value2 = 4 X 3 X 2 = 24
+- value1 < value2 => return 24
+
+- nums = [9, 6, 5, 4, 3, 2, 1]
+- l = 7
+- value1 = 9 X 6 X 5 = 270
+- value2 = 9 X 1 X 2 = 18
+- return 270

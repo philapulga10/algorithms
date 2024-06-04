@@ -1,0 +1,19 @@
+- nums = [2, 2, 3, 1]
+- distinctNums = [], seen = []
+- nums.length = 4
+  - i = 0 -> !seen[2] = true -> distinctNums = [2] -> seen[2] = true
+  - i = 1 -> !seen[2] = false
+  - i = 2 -> !seen[3] = true -> distinctNums = [2, 3] -> seen[3] = true
+  - i = 3 -> !seen[1] = true -> distinctNums = [2, 3, 1] -> seen[1] = true
+- -> distinctNums = [2, 3, 1]
+- firstMax = -Infinity, sencondMax = -Infinity, thirdMax = -Infinity
+- i = 0
+  - num = 2
+  - num > firstMax -> thirdMax = -Infinity -> sencondMax = -Infinity -> firstMax = 2
+- i = 1
+  - num = 3
+  - num > firstMax -> thirdMax = -Infinity -> sencondMax = 2 -> firstMax = 3
+- i = 2
+  - num = 1 > thirdMax -> thirdMax = 1
+- -> firstMax = 3, sencondMax = 2, thirdMax = 1
+- return thirdMax = 1
