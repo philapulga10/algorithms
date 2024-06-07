@@ -29,18 +29,23 @@
 // Output: [0]
 
 let moveZeroes = function (array) {
-  let slowPointer = 0;
+  let nonZeroElements = [];
 
-  for (let fastPointer = 0; fastPointer < array.length; fastPointer++) {
-    if (array[fastPointer] !== 0) {
-      array[slowPointer] = array[fastPointer];
-      slowPointer++;
+  // Tách các phần tử không phải 0 và đếm số lượng các số 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== 0) {
+      nonZeroElements.push(array[i]);
     }
   }
 
-  while (slowPointer < array.length) {
-    array[slowPointer] = 0;
-    slowPointer++;
+  // Lấp đầy mảng gốc với các phần tử không phải 0
+  for (let i = 0; i < nonZeroElements.length; i++) {
+    array[i] = nonZeroElements[i];
+  }
+
+  // Lấp đầy phần còn lại của mảng với số 0
+  for (let i = nonZeroElements.length; i < array.length; i++) {
+    array[i] = 0;
   }
 
   return array;
