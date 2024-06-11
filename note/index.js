@@ -261,3 +261,43 @@
 
   console.log(array);
 }
+
+// --------------------------------------------------------------
+
+{
+  let nonZeroElements = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== 0) {
+      nonZeroElements.push(array[i]);
+    }
+  }
+
+  for (let i = 0; i < nonZeroElements.length; i++) {
+    array[i] = nonZeroElements[i];
+  }
+
+  for (let i = nonZeroElements.length; i < array.length; i++) {
+    array[i] = 0;
+  }
+
+  console.log(array);
+}
+
+// --------------------------------------------------------------
+
+{
+  let lastNonZeroFoundAt = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== 0) {
+      let temp = array[lastNonZeroFoundAt];
+
+      array[lastNonZeroFoundAt] = array[i];
+      array[i] = temp;
+      lastNonZeroFoundAt++;
+    }
+  }
+
+  console.log(array);
+}

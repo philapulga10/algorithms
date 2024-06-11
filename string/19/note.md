@@ -1,0 +1,9 @@
+- s = "abbaca"
+- result = []
+- i = 0 -> result = ["a"]
+- i = 1 -> result = ["a", "b"]
+- i = 2 -> result[result.length - 1] = b === s[i] = b -> result = ["a"]
+- i = 3 -> result[result.length - 1] = a === s[i] = a -> result = []
+- i = 4 -> result = ["c"]
+- i = 5 -> result = ["a"]
+- -> result = ["c", "a"]

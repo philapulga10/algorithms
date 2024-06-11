@@ -26,8 +26,6 @@ function singleNumber(numbers) {
     }
   }
 
-  console.log(seen);
-
   for (let number in seen) {
     if (seen[number]) {
       return parseInt(number);

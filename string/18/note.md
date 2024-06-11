@@ -1,0 +1,21 @@
+- commonCount = { b: 1, e: 1, l: 2, a: 1 }
+- i = 1
+  - wordCount = { l: 2, a: 1, b: 1, e: 1 }
+  - char = b -> commonCount[b] !== 0 -> commonCount[b] = Math.min(1, 1) -> 1
+  - char = e -> commonCount[e] !== 0 -> commonCount[e] = Math.min(1, 1) -> 1
+  - char = l -> commonCount[l] !== 0 -> commonCount[l] = Math.min(2, 2) -> 2
+  - char = a -> commonCount[a] !== 0 -> commonCount[a] = Math.min(1, 1) -> 1
+- i = 2
+  - wordCount = { r: 2, o: 1, l: 2, e: 1 }
+  - char = b -> commonCount[b] !== 0 -> commonCount[b] = Math.min(1, 0) -> 0
+  - char = e -> commonCount[e] !== 0 -> commonCount[e] = Math.min(1, 1) -> 1
+  - char = l -> commonCount[l] !== 0 -> commonCount[l] = Math.min(2, 2) -> 2
+  - char = a -> commonCount[a] !== 0 -> commonCount[a] = Math.min(1, 0) -> 0
+    -> commonCount = { b: 0, e: 1, l: 2; a: 0 }
+- result = []
+- - b = 0
+  - e = 1
+    - result = [e]
+  - l = 2
+    - result = ["e", "l", "l"]
+  - a = 0
