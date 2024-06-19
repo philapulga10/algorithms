@@ -2,4 +2,5 @@
 - s === goal == "aa"
   - seen = []
   - char = a -> seen = ["a"]
-  - seen.has(a) === true
+  - seen.has(a) === true -> return true
+- pair = []

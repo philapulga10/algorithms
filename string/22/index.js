@@ -55,6 +55,6 @@ function buddyStrings(s, goal) {
   );
 }
 
-// console.log(buddyStrings("ab", "ba"));
+console.log(buddyStrings("ab", "ba"));
 // console.log(buddyStrings("ab", "ab"));
-console.log(buddyStrings("aa", "aa"));
+// console.log(buddyStrings("aa", "aa"));
