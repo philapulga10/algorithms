@@ -1,0 +1,5 @@
+- s = "aa", goal = "aa"
+- s === goal == "aa"
+  - seen = []
+  - char = a -> seen = ["a"]
+  - seen.has(a) === true
