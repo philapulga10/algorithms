@@ -292,9 +292,9 @@
   for (let i = 0; i < array.length; i++) {
     if (array[i] !== 0) {
       let temp = array[lastNonZeroFoundAt];
-
       array[lastNonZeroFoundAt] = array[i];
       array[i] = temp;
+
       lastNonZeroFoundAt++;
     }
   }
