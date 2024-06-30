@@ -18,6 +18,7 @@
   - carry = 0
   - i = -1, j = 0
 - j = 0 === 0
+
   - n1 = 0, n2 = 1
   - curSum = 0 + 1 + 0 = 1
   - reminder = 1 % 10 = 1
@@ -25,3 +26,31 @@
   - carry = 0
   - i = -2, j = -1
     -> return "134"
+
+- num1 = "99", num2 = "671"
+- i = 1, j = 2
+- sum = []
+- carry = 0
+
+- i = 1 > 0
+  - n1 = 9, n2 = 1
+  - curSum = 9 + 1 + 0 = 10
+  - reminder = 10 % 10 = 0
+  - sum = [0]
+  - carry = 1
+  - j = 1, i = 0
+- i = 0 === 0
+  - n1 = 9, n2 = 7
+  - curSum = 9 + 7 + 1 = 17
+  - reminder = 7
+  - sum = [0, 7]
+  - carry = 1
+  - j = 0, i = -1
+- j === 0
+  - n1 = 0, n2 = 6
+  - curSum = 0 + 6 + 1 = 7
+  - reminder = 7
+  - sum = [0, 7, 7]
+  - carry = 0
+  - j = -1, i = -2
+    => result = [7, 7, 0]

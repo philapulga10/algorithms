@@ -41,7 +41,7 @@ function addStrings(num1, num2) {
   return sum.reverse().join("");
 }
 
-let num1 = "11";
-let num2 = "123";
+let num1 = "99";
+let num2 = "671";
 
 console.log(addStrings(num1, num2));
